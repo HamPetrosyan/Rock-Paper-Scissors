@@ -1,0 +1,25 @@
+@use "./variables" as *;
+
+footer {
+  width: 100vw;
+
+  button {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 7px 25px;
+    border-radius: 0.4rem;
+    border: 3px solid $header-outline;
+    color: lighten($header-outline, 30%);
+    background: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background-color: rgba($color: #fff, $alpha: 0.8);
+      color: $dark-text;
+      cursor: pointer;
+    }
+  }
+}

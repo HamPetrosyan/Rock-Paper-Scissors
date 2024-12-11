@@ -1,0 +1,56 @@
+@use "./variables" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid $header-outline;
+  max-width: 700px;
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 1rem;
+  padding: 20px;
+
+  .text {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    line-height: 2rem;
+  }
+
+  .score-box {
+    padding: 12px 40px;
+    background-color: #fff;
+    color: $score-text;
+    border-radius: 5px;
+
+    .score {
+      color: $dark-text;
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+
+    .reset-score-btn {
+      margin-top: 10px;
+      padding: 5px 10px;
+      font-size: 14px;
+      color: #fff;
+      background-color: $score-text;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgb(21, 42, 135);
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+        background-color: rgba(21, 42, 135, 0.6);
+      }
+    }
+  }
+}
